@@ -1,0 +1,21 @@
+{
+  "name": "priorart",
+  "description": "Brutally honest prior-art checker for invention ideas. Searches arXiv, GitHub, and the web in parallel and returns a NOVEL/PARTIALLY DONE/FULLY DONE verdict with real URLs. Saves hours of duplicating existing work.",
+  "version": "0.1.0",
+  "author": {
+    "name": "pascal910107"
+  },
+  "homepage": "https://github.com/pascal910107/priorart-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pascal910107/priorart-plugin.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "research",
+    "prior-art",
+    "invention",
+    "novelty",
+    "literature-search"
+  ]
+}
