@@ -29,6 +29,7 @@ Pick queries from these angles, mix them:
 - **Commercial**: product names, "AI startup ...", "agent infrastructure ..."
 - **Technical primitives**: the underlying CS/math concepts
 - **Niche-expert search**: "what would someone deep in this area google"
+- **Paradigm-shift framing**: "X for agents", "agent-native X", "X as code", "AI-native X" — new entrants often coin new vocabulary specifically to mark the break from existing solutions. Existing-category keywords (MCP, plugin, skill, API) will miss them.
 
 ### Step 3 — Search in parallel
 
@@ -40,7 +41,19 @@ Use WebSearch (and WebFetch for deep dives) across:
 
 If a result looks highly relevant, use WebFetch to read its description / paper abstract more deeply.
 
-### Step 4 — Output the report
+### Step 4 — Decompose before judging (homogeneity test)
+
+Before picking a verdict, especially before declaring FULLY DONE: list the **design assumptions** every existing solution shares. If they all share the same assumption (e.g. "agent remote-controls a human-designed GUI tool", "agent emits Markdown to a human-authored format", "agent calls an existing SaaS API"), that shared assumption is the lever the next entrant will pull — and the space is not actually saturated, just homogeneous on one axis.
+
+Specifically apply the **agent-native medium rubric** when the idea is "AI + medium X":
+1. Is the current tool GUI-first (PowerPoint, Figma, Excalidraw, Notion)?
+2. Do all existing AI integrations remote-control that GUI (via API/MCP/plugin)?
+3. Is the output non-diffable / non-reviewable / non-version-controllable?
+4. Could the primitive be re-expressed as code (React components, JSX-like DSL, text)?
+
+If all four hold, the space is **PARTIALLY DONE not FULLY DONE** — the agent-native primitive layer is the open niche. Reference example: open-slide (1weiho/open-slide, 3.3k stars in 2026) won this position for slides while 10+ PPTX MCPs / Marp skills / official Claude for PowerPoint coexisted.
+
+### Step 5 — Output the report
 
 Use exactly this markdown structure:
 
@@ -78,6 +91,8 @@ Use exactly this markdown structure:
 
 - ❌ Listing only academic papers when there's commercial activity (or vice versa)
 - ❌ Saying "FULLY DONE" based on superficial keyword match without checking what each project actually does
+- ❌ Treating "many existing wrappers" as saturation when they all share one design assumption — that shared assumption is the lever for the next entrant. Crowded ≠ saturated. Always run the Step 4 decomposition before declaring FULLY DONE.
+- ❌ Only searching keywords from existing-solution categories (MCP, plugin, skill, API). New paradigms use new vocabulary; you must search both.
 - ❌ Saying "NOVEL" when you didn't search hard enough — say UNCLEAR instead
 - ❌ Hedging the verdict ("could be considered novel" — pick one)
 - ❌ Ignoring the "Specific gap" section when verdict is PARTIALLY DONE — that's the most useful part for the user
